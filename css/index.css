@@ -1,0 +1,343 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #041321;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end; 
+    margin: 0;
+    position: fixed; 
+    width: 100%; 
+    background: #041321; 
+    z-index: 1000; 
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu li {
+    position: relative;
+    margin-right: 10px;
+}
+
+.menu li a {
+    display: block;
+    color: #02d9c5;
+    padding: 15px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.menu a:hover {
+    color: white;
+}
+
+section {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    height: calc(100vh - 80px); 
+    padding-top: 40px; 
+}
+
+.present {
+    margin-right: 250px; 
+    color: white;
+    text-align: left; 
+    margin-top: -50px;
+}
+
+.present h2 {
+    color: #02d9c5;
+    font-size: 2em;
+}
+
+.present h1 {
+    font-size: 3em;
+}
+
+.contacto {
+    display: flex; 
+    justify-content: center; 
+    margin-top: 20px; 
+}
+
+.social-icon {
+    width: 50px; 
+    height: 50px; 
+    margin: 0 10px; 
+    transition: transform 0.3s ease, filter 0.3s ease; 
+}
+
+.social-icon:hover {
+    transform: scale(1.1); 
+    filter: brightness(1.2); 
+}
+
+.perfil {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.perfil img {
+    border-radius: 10px;
+    max-width: 100%; /* Asegura que la imagen no exceda el contenedor */
+    height: auto; /* Mantiene la proporción */
+    max-height: 400px; /* Limita la altura máxima de la imagen de inicio */
+}
+
+
+.sobre-mi {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    width: 100%; 
+    color: white;
+    padding: 20px; 
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.imagen {
+    flex: 1; 
+    display: flex; 
+    justify-content: center; 
+    margin-left: 15%;
+}
+
+.texto {
+    flex: 2; 
+    margin-left: 150px; 
+}
+
+.texto p {
+    padding: 20px;
+    font-size: 1.2em;
+}
+
+.habilidades {
+    color: white;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    padding: 20px; 
+}
+
+.habilidades h1 {
+    text-align: center;
+    color: #02d9c5;
+    margin-bottom: 20px; 
+    font-size: 3em;
+}
+
+.habilidades-container {
+    display: flex; 
+    justify-content: space-between; 
+    width: 100%; 
+}
+
+.habilidades img {
+    width: 110px; /* Ajusta el ancho de las imágenes de habilidades */
+    height: auto; /* Mantiene la proporción */
+    margin: 10px; /* Espacio entre las imágenes */
+    transition: transform 0.3s ease; /* Agrega un efecto de hover */
+}
+
+.habilidades img:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el mouse */
+}
+
+.mejorando, .aprendiendo {
+    width: 45%; 
+    display: flex;
+    flex-direction: column; 
+    margin: 20px; 
+    padding: 55px; 
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+    align-items: center; 
+}
+
+.imagen-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+
+.proyectos-container {
+    display: flex; 
+    justify-content: space-between; 
+    padding: 20px; 
+    color: white; 
+}
+
+.proyecto {
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 10px; 
+    padding: 20px; 
+    width: 45%; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+}
+
+.imagenes-proyecto {
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    margin: 20px 0; 
+}
+
+.imagenes-proyecto img {
+    margin: 10px; 
+    max-width: 100%; 
+    border-radius: 10px; 
+}
+
+.proyecto h1 {
+    text-align: center; 
+    color: #02d9c5; 
+    margin-bottom: 10px; 
+}
+
+.proyecto p {
+    font-size: 1.1em; 
+    line-height: 1.6; 
+    text-align: justify; 
+    margin-top: 10px; 
+    color: #d1d1d1; 
+    padding: 10px; 
+    border-radius: 5px; 
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .menu {
+        flex-direction: row; /* Mantiene el menú en fila */
+    }
+
+    .present {
+        margin-right: 0; /* Elimina el margen en pantallas pequeñas */
+        text-align: center; /* Centra el texto */
+    }
+
+    .texto {
+        margin-left: 0; /* Elimina el margen izquierdo en pantallas pequeñas */
+    }
+
+    .habilidades-container {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    }
+
+    .habilidades h1 {
+        font-size: 2.5em; /* Ajusta el tamaño del encabezado */
+    }
+}
+
+@media (max-width: 768px) {
+    .present h1 {
+        font-size: 2.5em; /* Ajusta el tamaño del encabezado */
+    }
+
+    .present h2 {
+        font-size: 1.5em; /* Ajusta el tamaño del subencabezado */
+    }
+
+    .social-icon {
+        width: 40px; 
+        height: 40px; 
+    }
+
+    .mejorando, .aprendiendo {
+        width: 90%; /* Ancho del 90% en pantallas pequeñas */
+    }
+
+    .imagen-container img {
+        width: 45%; /* Ajusta el ancho de las imágenes */
+    }
+
+    .proyecto {
+        width: 90%; /* Ancho casi completo en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: row; /* Mantiene el menú en fila */
+    }
+
+    .menu li {
+        margin: 5px; /* Espacio entre los elementos del menú */
+    }
+
+    .present h1 {
+        font-size: 2em; 
+    }
+
+    .present h2 {
+        font-size: 1.2em; 
+    }
+
+    .social-icon {
+        width: 35px; 
+        height: 35px; 
+    }
+
+    .texto p {
+        font-size: 0.9em; /* Tamaño de fuente más pequeño */
+    }
+}
+
+
+.slide-in {
+    animation: slideIn 0.5s forwards; /* Animación de entrada */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Animaciones de entrada y salida */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.5s forwards; /* Animación de entrada */
+}
+
+.slide-out {
+    animation: slideOut 0.5s forwards; /* Animación de salida */
+}
